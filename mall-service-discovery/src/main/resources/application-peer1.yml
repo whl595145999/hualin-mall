@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: mall-eureka-server
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    register-with-eureka: true #表示是否将自己注册到 Eureka Server，默认为 true。
+    fetch-registry: true   #表示是否从 Eureka Server 获取注册信息，默认为 true
+    service-url:
+      defaultZone: http://peer2:7002/eureka/,http://peer3:7003/eureka/

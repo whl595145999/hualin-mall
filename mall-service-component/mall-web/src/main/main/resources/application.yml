@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/, http://localhost:7002/eureka/,http://localhost:7003/eureka/ # 指定 Eureka 注册中心的地址
+server:
+  port: 8080 # 分别为 9000、9001、9002
+
+#feign:
+#  hystrix:
+ #   enabled: true #断路器保持在开路状态一段时间后 (默认 5 秒)，自动切换到半开路状态 (HALF-OPEN)。这时会判断下一次请求的返回情况，如果请求成功，断路器切回闭路状态 (CLOSED)，否则重新切换到开路状态 (OPEN)
